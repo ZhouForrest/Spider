@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %}
+首页左侧导航
+{% endblock %}
+{% block extcss %}
+<link rel="stylesheet" type="text/css" href="/static/css/public.css" />
+{% endblock %}
+
+
+{% block content %}
+	<!-- 左边节点 -->
+	<div class="container">
+		<div class="leftsidebar_box">
+			<dl class="system_log">
+				<dt>
+					活跃IP<img class="icon3"
+						src="/static/img/coin19.png" /><img class="icon4"
+						src="/static/img/coin20.png" />
+				</dt>
+
+				<dd>
+					<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
+						src="/static/img/coin222.png" /><a class="cks" href="{% url 'app:ip_list' '0' %}"
+						target="main">Fast</a><img class="icon5" src="/static/img/coin21.png" />
+				</dd>
+
+				<dd>
+					<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
+						src="/static/img/coin222.png" /><a class="cks" href="{% url 'app:ip_list' '1' %}"
+						target="main">代理云</a><img class="icon5" src="/static/img/coin21.png" />
+				</dd>
+				<dd>
+					<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
+						src="/static/img/coin222.png" /><a class="cks" href="{% url 'app:ip_list' '2' %}"
+						target="main">自建代理</a><img class="icon5" src="/static/img/coin21.png" />
+				</dd>
+				<dd>
+					<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
+						src="/static/img/coin222.png" /><a class="cks" href="{% url 'app:ip_list' '3' %}"
+						target="main">其它代理</a><img class="icon5" src="/static/img/coin21.png" />
+				</dd>
+			</dl>
+
+			<dl class="system_log">
+				<dt>
+					<img class="icon1" src="/static/img/coin03.png" />黑名单<img class="icon3"
+						src="/static/img/coin19.png" /><img class="icon4"
+						src="/static/img/coin20.png" />
+				</dt>
+				<dd>
+					<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
+						src="/static/img/coin222.png" /><a class="cks" href=""
+						target="main">类型一</a><img class="icon5" src="/static/img/coin21.png" />
+				</dd>
+				<dd>
+					<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
+						src="/static/img/coin222.png" /><a class="cks" href=""
+						target="main">类型二</a><img class="icon5" src="/static/img/coin21.png" />
+				</dd>
+			</dl>
+			<dl class="system_log">
+				<dt>
+					<a class="cks" href="{% url 'app:detial' %}"
+						target="main"><img class="icon1" src="/static/img/coinL1.png" />综合查询<img class="icon3"
+						src="/static/img/coin19.png" /></a>
+				</dt>
+
+			</dl>
+
+		</div>
+
+	</div>
+
+{% endblock %}
+{% block extjs %}
+    <script src="/static/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/public.js"></script>
+{% endblock %}

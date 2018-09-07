@@ -1,0 +1,38 @@
+﻿{% extends 'base.html' %}
+{% block extcss %}
+<style>
+    td {
+        border: solid 1px;
+    }
+</style>
+{% endblock %}
+{% block content %}
+    <table>
+        <tr>
+            <th>可用ip</th>
+            <th>黑名单</th>
+        </tr>
+        <tr>
+            <td>fast</td>
+            <td>云代理</td>
+            <td>自建代理</td>
+            <td>其他代理</td>
+            <td>黑名单1</td>
+            <td>黑名单2</td>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>10</td>
+            <td>49</td>
+            <td>50</td>
+            <td>50</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>共1000</td>
+            <td>共30000</td>
+        </tr>
+    </table>
+{% endblock %}
+{% block extjs %}
+{% endblock %}
