@@ -1,3 +1,3 @@
 from scrapy.cmdline import execute
 
-execute(['scrapy', 'crawl', 'autohome'])
+execute(['scr apy', 'crawl', 'Crawel__qyxg_xzcf__credit_taiyuan'])

@@ -1,36 +1,45 @@
 ﻿{% extends 'base.html' %}
 {% block extcss %}
 <style>
+table{
+    height:230px;
+    width:800px;
+    border: 1px solid;
+}
     td {
         border: solid 1px;
+        text-align: center;
+    }
+    th{
+        border:1px solid;
+        text-align: center;
     }
 </style>
+
 {% endblock %}
 {% block content %}
-    <table>
+    <table cellspacing="0">
         <tr>
-            <th>可用ip</th>
-            <th>黑名单</th>
+            <td colspan="4">可用ip</td>
+            <td>黑名单</td>
         </tr>
         <tr>
             <td>fast</td>
-            <td>云代理</td>
+            <td>代理云</td>
             <td>自建代理</td>
-            <td>其他代理</td>
-            <td>黑名单1</td>
-            <td>黑名单2</td>
+            <td>其它代理</td>
+            <td rowspan="2">100000</td>
+
         </tr>
         <tr>
+            <td>100</td>
             <td>200</td>
-            <td>10</td>
-            <td>49</td>
-            <td>50</td>
-            <td>50</td>
-            <td>50</td>
+            <td>300</td>
+            <td>400</td>
         </tr>
         <tr>
-            <td>共1000</td>
-            <td>共30000</td>
+          <td colspan="4">可用ip共</td>
+            <td>合计ip: 1000000</td>
         </tr>
     </table>
 {% endblock %}

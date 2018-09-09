@@ -14,14 +14,12 @@
         <th>TTL</th>
     </tr>
     {% for ip_info in pages %}
-    {% with num=forloop.counter0 %}
     <tr>
         <td></td>
         <td>{{ ip_info.ip }}</td>
         <td>{{ ip_info.port }}</td>
-        <td>{{ ttl.num }}</td>
+        <td>{{ ip_info.ttl }}</td>
     </tr>
-    {% endwith %}
     {% endfor %}
 </table>
 <p class="msg">共找到{{ pages.paginator.count }}条年度预算记录，当前显示从第{{ pages.start_index }}条至第{{ pages.end_index }}条</p>
@@ -30,20 +28,20 @@
 <ul id="PageNum">
     {% if pages.has_previous %}
     <li>
-        <a href="{% url 'app:ip_list' ip_type %}?page_num={{ pages.previous_page_number }}">上一页</a>
+        <a href="{% url 'app:ip_search'%}?page_num={{ pages.previous_page_number }}">上一页</a>
     </li>
     {% endif %}
     {% for page in pages.paginator.page_range %}
-        <li><a href="{% url 'app:ip_list' ip_type %}?page_num={{ page }}">{{ page }}</a></li>
+        <li><a href="{% url 'app:ip_search'  %}?page_num={{ page }}">{{ page }}</a></li>
     {% endfor %}
     {% if pages.has_next %}
     <li>
-        <a href="{% url 'app:ip_list' ip_type %}?page_num={{ pages.next_page_number }}">下一页</a>
+        <a href="{% url 'app:ip_search' %}?page_num={{ pages.next_page_number }}">下一页</a>
     </li>
     {% endif %}
     <li id="page_num" value="{{ pages.number }}">当前第{{ pages.number }}页</li>
 
-    <li><a href="{% url 'app:ip_list' ip_type %}?page_num={{ pages.paginator.num_pages }}">尾页</a></li>
+    <li><a href="{% url 'app:ip_search'  %}?page_num={{ pages.paginator.num_pages }}">尾页</a></li>
 </ul>
 
 </div>

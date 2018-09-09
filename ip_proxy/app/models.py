@@ -6,9 +6,9 @@ class SsdbModel(object):
     def __init__(self):
         self.host = '10.28.100.151'
         self.port = 8888
-        self.client = pyssdb.Client(host=self.host, port=self.port)
+        # self.client = pyssdb.Client(host=self.host, port=self.port)
         # self.client = pyssdb.ConnectionPool(host=self.host, port=self.port)
-
+        self.client = ''
     def get_fast_proxy(self):
         """
         获取代理延迟小于300ms的代理
@@ -46,6 +46,9 @@ class SsdbModel(object):
 
     def get_ttl(self, ip):
         return str(self.client.ttl(ip))[2:-1]
+
+    def get_ip(self, msg):
+        return self.client.keys('msg', 'msg~', 1000000)
 
     def to_dict(self, base):
         base_ip = str(base)[2:-2]
